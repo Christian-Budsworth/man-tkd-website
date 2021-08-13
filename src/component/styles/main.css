@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    'banner'
+    'sitemap'
+    'main content'
+  }
+  
+  .mainContent {
+    grid-area: 'main content';
+    max-width: 100%;
+  }

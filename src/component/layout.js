@@ -1,21 +1,18 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import Navbar from './Navbar'
+import Banner from './Banner'
+import './styles/main.css'
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div>
+    <div className="container">
       <title>{pageTitle}</title>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-      </nav>
-      <main>
-        <h1>{pageTitle}</h1>
+      <Banner />
+      <Navbar />
+      <main className="mainContent">
         {children}
       </main>
     </div>
   )
 }
-export default Layout
+export default Layout 

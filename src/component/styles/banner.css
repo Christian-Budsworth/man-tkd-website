@@ -1,0 +1,28 @@
+.banner {
+    grid-area: 'banner';
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'logo';
+  }
+
+  
+  .image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    max-width: 200px;
+  }
+  
+   .logo {
+    grid-area: logo;
+    max-width: 200px;
+  }
+  
+  .background {
+    grid-area: background;
+    height: 300px;
+    display: none;
+    max-width: auto
+  }
+  

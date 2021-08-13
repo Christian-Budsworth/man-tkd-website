@@ -3,7 +3,7 @@ import * as React from "react";
 import Layout from '../component/layout'
 import fundraising from "../images/about_us/mantkd_fundraising.jpg";
 import coaches from "../images/about_us/mantkd_coaches.jpg";
-
+import '../component/styles/about-us.css'
 const text = {
   title: "About Us",
   headers: {
@@ -50,7 +50,8 @@ const images = {
 // Step 2: Define your component
 const AboutPage = () => {
     return (
-        <Layout pageTitle={text.title}>
+        <Layout pageTitle="About Us">
+          <h1>{text.title}</h1>
           <h2>{text.headers.header1}</h2>
           <p>{text.body.body1}</p>
           <img src={images.manTKD_fundraising.location} alt={images.manTKD_fundraising.alt}/>

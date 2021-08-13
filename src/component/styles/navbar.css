@@ -1,0 +1,17 @@
+.nav-bar {
+    grid-area: 'sitemap';
+  }
+
+  .nav-bar li {
+    list-style-type:none;
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+  }
+  .nav-bar ul {
+    list-style-type:none;
+    padding: 2px;
+  }
