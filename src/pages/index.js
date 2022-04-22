@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import bilal from "../images/home/master_bilal_naqshbandi.jpg"
-import * as mainCSS from '../component/styles/main.css'
 import Layout from "../component/layout";
 
 const text = {
@@ -28,8 +27,8 @@ const text = {
 const IndexPage = () => {
   return (
       <Layout pageTitle="Mantkd Taekwondo Academy">
-        <div className={mainCSS.mainContent}>
-        <h1 className={mainCSS.header}>{text.header.title}</h1>
+        <div>
+        <h1>{text.header.title}</h1>
         <h2>{text.header.header1}</h2>
         <p>{text.paragraph.paragraph1}</p>
         <h2>{text.header.header2}</h2>
@@ -40,8 +39,8 @@ const IndexPage = () => {
         <p>{text.paragraph.paragraph4}</p>
 
         </div>
-        <div className={mainCSS.sideContent}>
-          <img src={bilal} className={mainCSS.photo}/>
+        <div>
+          <img src={bilal} />
         </div>
       </Layout>
   );

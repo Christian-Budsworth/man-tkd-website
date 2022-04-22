@@ -1,9 +1,9 @@
 // Step 1: Import your component
 import * as React from "react";
-import Layout from '../component/layout'
-import fundraising from "../images/about_us/mantkd_fundraising.jpg";
-import coaches from "../images/about_us/mantkd_coaches.jpg";
-import '../component/styles/about-us.css'
+import Layout from '../../component/layout'
+import fundraising from "../../images/about_us/mantkd_fundraising.jpg";
+import coaches from "../../images/about_us/mantkd_coaches.jpg";
+import '../../component/styles/about-us.css'
 const text = {
   title: "About Us",
   headers: {

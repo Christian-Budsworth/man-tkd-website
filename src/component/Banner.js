@@ -5,7 +5,7 @@ import "./styles/banner.css"
 
 export default function Banner() {
   return (
-    <div className="banner">
+    <div className="topbar">
     <img className="image logo" src={manTKDLogo}/>
     <img className="image background" src={bannerImage}/>
     </div>
