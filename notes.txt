@@ -1,0 +1,28 @@
+  @media (min-width: 600px) {
+    .container {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+      'banner banner' 
+      'sitemap main-content'
+    }
+  }
+
+    @media (min-width: 600px) {
+    .banner {
+        grid-template-columns: 25% 1fr;
+        grid-template-areas: 'logo background';
+      }
+
+    .background {
+        grid-area: background;
+        display: block;
+        background-size: cover
+      }
+   }
+
+  @media (min-width: 600px) {
+    .nav-bar {
+        grid-area: 'sitemap';
+      }
+    }
