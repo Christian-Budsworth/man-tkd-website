@@ -30,10 +30,15 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-      # ─── Deploy to gh‑pages ─────────────────────────────────────────
-      - name: Deploy
-        uses: actions/upload-pages-artifact@v3.0.1
+      # ─── Deploy to GitHub Pages ─────────────────────────────────────────
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: storyBook
-          path: ./storybook-static
-          retention-days: 7
+          path: './storybook-static'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
