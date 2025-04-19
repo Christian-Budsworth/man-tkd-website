@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import bilal from "../images/home/master_bilal_naqshbandi.jpg"
-import Layout from "../component/layout";
+import Layout from "../components/layout";
 
 const text = {
   header: {

@@ -1,0 +1,20 @@
+/* ---------- base ---------- */
+.text {
+    font-size: 1rem;        /* default (medium) */
+    color: #202124;         /* default (black‑ish) */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* ---------- size variants ---------- */
+  .text--small  { font-size: 0.875rem; }
+  .text--large  { font-size: 1.25rem;  }
+  
+  /* ---------- colour variants ---------- */
+  .text--primary   { color: #1a73e8; }
+  .text--secondary { color: #5f6368; }
+  
+  /* ---------- state modifiers ---------- */
+  .text--bold   { font-weight: bold;   }
+  .text--italic { font-style: italic;  }
+  
