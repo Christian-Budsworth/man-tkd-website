@@ -32,9 +32,8 @@ jobs:
 
       # ─── Deploy to gh‑pages ─────────────────────────────────────────
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
-          github_token: ${{ secrets.GH_TOKEN }}   # or ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
-          publish_branch: gh-pages
-          commit_message: "chore: deploy storybook"
+          name: storyBook
+          path: ./storybook-static
+          retention-days: 7
