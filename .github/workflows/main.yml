@@ -1,0 +1,40 @@
+name: Deploy Storybook to GH Pages
+
+on:
+  push:
+    branches: [main]         # run every push to main
+  workflow_dispatch:         # manual trigger
+
+permissions:
+  contents: write             # needed for gh‑pages commit
+  pages: write                # only if you use actions/deploy-pages
+  id-token: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'        # or 'pnpm'/'yarn'
+
+      - name: Install deps
+        run: npm ci           # or pnpm install --frozen-lockfile
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      # ─── Deploy to gh‑pages ─────────────────────────────────────────
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}   # or ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./storybook-static
+          publish_branch: gh-pages
+          commit_message: "chore: deploy storybook"
