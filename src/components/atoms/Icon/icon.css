@@ -1,0 +1,17 @@
+.icon {
+    display: inline-block;
+    object-fit: cover;       /* keep aspect ratio, fill box */
+    vertical-align: middle;
+  }
+  
+  /* ── size helpers (optional) ───────────────────────── */
+  .icon--xs { width: 16px; height: 16px; }
+  .icon--sm { width: 24px; height: 24px; }
+  .icon--md { width: 32px; height: 32px; }
+  .icon--lg { width: 48px; height: 48px; }
+  .icon--xl { width: 64px; height: 64px; }
+  
+  /* ── shape helpers ─────────────────────────────────── */
+  .icon--square    { aspect-ratio: 1 / 1; }
+  .icon--rectangle { aspect-ratio: 4 / 3; }  /* or whatever ratio you need */
+  

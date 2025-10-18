@@ -1,0 +1,46 @@
+/* ---------- base ---------- */
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;                    /* icon ↔ text spacing */
+    line-height: 1;
+    padding: 0.75rem;               /* default rectangle: 12 px all round */
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: #1a73e8;            /* brand blue — tweak in tokens */
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .footer-link:hover,
+  .footer-link:focus-visible {
+    background: #1559b3;
+    outline: none;
+  }
+  
+  .footer-link__icon {
+    flex-shrink: 0;                 /* never scale SVG */
+  }
+  
+  .footer-link--bold {
+    font-weight: 700;
+  }
+  
+  /* ---------- shape variants ---------- */
+  .footer-link--square {
+    width: 3rem;                    /* 48  px hit target */
+    height: 3rem;
+    padding: 0;                     /* content centred via flexbox */
+  }
+  
+  .footer-link--rectangle {
+    min-width: 6rem;                /* enough for text */
+  }
+  
+  /* optional colour variants if you need them later
+  .footer-link--secondary { background: #5f6368; }
+  */
+  

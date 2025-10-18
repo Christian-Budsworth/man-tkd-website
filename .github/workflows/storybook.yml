@@ -30,11 +30,15 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-      # ─── Deploy to gh‑pages ─────────────────────────────────────────
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      # ─── Deploy to GitHub Pages ─────────────────────────────────────────
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}   # or ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
-          publish_branch: gh-pages
-          commit_message: "chore: deploy storybook"
+          path: './storybook-static'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

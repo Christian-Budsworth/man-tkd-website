@@ -1,0 +1,15 @@
+.link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;               /* optional */
+    transition: transform 0.2s ease;
+  }
+  
+  .link-icon:hover,
+  .link-icon:focus-visible {
+    transform: scale(1.08);
+    outline: 2px solid #1a73e8;       /* makes keyboard focus obvious */
+    outline-offset: 2px;
+  }
+  

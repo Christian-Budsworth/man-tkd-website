@@ -1,0 +1,21 @@
+.socials {
+    display: flex;
+    gap: 0.75rem;               /* space between icons */
+    align-items: center;
+  }
+  
+  /* —— Mobile (≤ 640 px) ———————————————— */
+  @media (max-width: 640px) {
+    .socials {
+      width: 100%;
+      justify-content: space-between;  /* equal spacing edge-to-edge */
+    }
+  }
+  
+  /* —— Tablet / Desktop (≥ 641 px) ————————— */
+  @media (min-width: 641px) {
+    .socials {
+      justify-content: center;         /* centred cluster */
+    }
+  }
+  
